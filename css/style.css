@@ -738,13 +738,13 @@ a.btn:hover {
     display: inline-block;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgb(197, 44, 102);
+    background-color: rgb(91, 7, 99);
     padding: 1px;
     text-align: center;
     text-transform: uppercase;
 }
 .event-list > li:nth-child(even) > time {
-    background-color: rgb(165, 82, 167);
+    background-color: rgb(132, 10, 10);
 }
 .event-list > li > time > span {
     display: none;
