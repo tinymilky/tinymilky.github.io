@@ -1,0 +1,29 @@
+div.blockcontent {
+	border: 1px solid silver;
+	padding: 0.3em 0.5em;
+}
+
+div.infoblock > div.blockcontent {
+	background: #ffffee;
+    width: 50%;
+    /* position: absolute; */
+    left: expression((body.clientWidth-50)/2);
+    top: expression((body.clientHeight-50)/2);
+    /* text-align: center; */
+}
+
+div.blockcontent p + ul, div.blockcontent p + ol {
+	margin-top: 0.4em;
+}
+
+div.infoblock p {
+	margin-bottom: 0em;
+}
+
+div.infoblock li p, div.infoblock dd p {
+	margin-bottom: 0.5em;
+}
+
+div.infoblock p + p {
+	margin-top: 0.8em;
+}
