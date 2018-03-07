@@ -416,6 +416,25 @@
         </div>
     </footer>
 
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+        <xsl:output method="text" />
+        <xsl:template match="/Footer">
+            <![CDATA[
+<!-- Start of StatCounter Code for Microsoft Office Live -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=11149150;
+var sc_invisible=0;
+var sc_security="59193237";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+//]]>
+            </script>
+            <noscript><div class="statcounter"><a title="hit counter" href="http://statcounter.com/free-hit-counter/" class="statcounter"><img class="statcounter" src="//c.statcounter.com/11149150/0/59193237/0/" alt="hit counter" /></a></div></noscript>
+            <!-- End of StatCounter Code for Microsoft Office Live -->
+        </xsl:template>
+    </xsl:stylesheet>
+
     <!-- Core JavaScript Files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
