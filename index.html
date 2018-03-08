@@ -480,10 +480,26 @@
         </div>
 
         <div class="container">
+            <button type="button" class="btn btn-secondary" onclick="startKmeans()">Play K-means Game</button>
+            <br/>
+            <div class="row col-lg-offset-2">
+                <div class="col-lg-3">
+                    # of Clusters:
+                    <input class="inputParam" type="text" maxlength="20" id="k_input" value="10"></input>
+                </div>
+                <div class="col-lg-3">
+                    # of Samples:
+                    <input class="inputParam" type="text" maxlength="20" id="n_input" value="1000"></input>
+                </div>
+                <div class="col-lg-3">
+                    # of Iterations:
+                    <input class="inputParam" type="text" maxlength="20" id="i_input" value="10"></input>
+                </div>
+
+            </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="wow bounceInDown" data-wow-delay="0.4s">
-                        <p>K-means</p>
                         <div id="kmeans" class="kmeans-chart"></div>
                     </div>
                 </div>

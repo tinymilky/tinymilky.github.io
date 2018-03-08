@@ -1,5 +1,5 @@
 // Create kmeans model
-var kmeans;
+var kmeans, interval;
 // Create related data for kmeans
 var dataset, labels, N;
 var means;
@@ -94,6 +94,8 @@ function initializeSVG() {
 
     console.log(colors);
 
+    d3.select("svg").remove();
+
     svg = d3.select('#kmeans').append("svg")
         .style("width", width + margin.left + margin.right)
         .style("height", height + margin.top + margin.bottom);
@@ -158,7 +160,7 @@ function iterate() {
 
 }
 
-function initialize() {
+function initialize(iters) {
 
     initializeSVG();
     centroids = vol_to_svgPoints(kmeans.means, 'centroid');
@@ -167,12 +169,13 @@ function initialize() {
     updateSVG();
 
     iter = 1;
-    maxIter = 10;
+    maxIter = iters || 10;
 
-    var interval = setInterval(function () {
+    interval = setInterval(function () {
         if (iter < maxIter + 1) {
             iterate();
             iter++;
+            console.log(iter, maxIter);
         }
         else {
             clearInterval(interval);
@@ -183,15 +186,21 @@ function initialize() {
 
 }
 
-$(function () {
-    // note, globals
-    var num = 1000,
+function startKmeans() {
+    clearInterval(interval);
+    var num = parseInt(document.getElementById("n_input").value),
         dim = 2,
-        k = 10;
+        k = parseInt(document.getElementById("k_input").value),
+        iters = parseInt(document.getElementById("i_input").value);
+    console.log(num, k, iters);
     random_data(num, dim);
     kmeans = new easymljs.kmeans();
     kmeans.initMeans(k, dim);
 
-    initialize();
+    initialize(iters);
+}
 
+$(function () {
+    // note, globals
+    startKmeans()
 });
