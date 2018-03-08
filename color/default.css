@@ -4,28 +4,28 @@ a,a:hover {
 }
 
 .intro .page-scroll a:hover {
-	color: rgb(249,163,111);
+	color: rgb(172,31,45);
 }
 
 .icon:hover .fa{
-	color: rgb(249,163,111);
+	color: rgb(172,31,45);
 }
 
 ul.nav li a:hover {
-	color: rgb(249,163,111);
+	color: rgb(172,31,45);
 }
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: rgb(249,163,111);
+    background-color: rgb(172,31,45);
 }
 
 .bg-skin {
-	background: rgb(249,163,111);
+	background: rgb(172,31,45);
 }
 
 form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
-	border-color: rgb(249,163,111);
+	border-color: rgb(172,31,45);
 }
 
 footer {
@@ -34,6 +34,6 @@ footer {
 
 .btn-skin {
   color: #fff;
-  background-color: rgb(249,163,111);
-  border-color: rgb(249,163,111);
+  background-color: rgb(172,31,45);
+  border-color: rgb(172,31,45);
 }

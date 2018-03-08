@@ -47,7 +47,7 @@ d3.timer(function(elapsed) {
         context.beginPath();
         context.moveTo(pi.x, pi.y);
         context.lineTo(pj.x, pj.y);
-        context.strokeStyle="rgba(249,163,111,0.6)";
+        context.strokeStyle="rgba(172,31,45,0.6)";
         context.stroke();
       }
     }

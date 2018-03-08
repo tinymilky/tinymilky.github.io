@@ -744,7 +744,7 @@ a.btn:hover {
     text-transform: uppercase;
 }
 .event-list > li:nth-child(even) > time {
-    background-color: rgb(132, 10, 10);
+    background-color: rgb(172,31,45);
 }
 .event-list > li > time > span {
     display: none;
