@@ -24,15 +24,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
 
-
-    <!-- <link rel="stylesheet" href="css/jemdoc.css" type="text/css"/> -->
-    <!-- =======================================================
-    Theme Name: Lonely
-    Theme URL: https://bootstrapmade.com/free-html-bootstrap-template-lonely/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
-
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -43,29 +34,15 @@
 
     <!-- Section: intro -->
     <section id="intro" class="intro">
-
-        <!-- <div class="slogan">
-      <a href="index.html"><img src="img/logo.png" alt="" /></a>
-    </div>
-    <div class="page-scroll">
-      <a href="#about">
-			<i class="fa fa-angle-down fa-5x animated"></i>
-	  </a>
-    </div> -->
-        <canvas width="1000" height="1000" style="position:absolute;left:0;top:0;overflow: hidden"></canvas>
+        <canvas id="life_game" width="1000" height="1000" style="position:absolute;left:0;top:0;overflow: hidden"></canvas>
         <div id="title_wrapper">
             <h1 id="site_title" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_title" class="skrollable skrollable-between" style="opacity: 1; top: 53.3333px;">
             <a style="color:rgb(172,31,45)">Miruku</a> H. Zhang
         </h1>
 
-            <!-- Site Slogan -->
-            <h2 id="site_slogan" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_slogan" class="skrollable skrollable-between" style="opacity: 1; top: 63.3333px;">
-            Ph.D. Student of ECE at <a style="color:rgb(172,31,45)">Cornell</a>
+        <h2 id="site_slogan" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_slogan" class="skrollable skrollable-between" style="opacity: 1; top: 63.3333px;">
+        Ph.D. Student of ECE at <a style="color:rgb(172,31,45)">Cornell</a>
         </h2>
-            <!-- Scroll down button -->
-            <!-- <div id="scroll_down_button" data-0="opacity: 1; top:0px;" data-400="opacity: 0; top: 100px;" data-anchor-target="#scroll_down_button" _vimium-has-onclick-listener="" class="skrollable skrollable-between" style="opacity: 0; top: 100px;">
-            <i class="fa fa-angle-down"></i>
-        </div> -->
         </div>
     </section>
     <!-- /Section: intro -->
@@ -592,10 +569,11 @@ document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounte
     <script src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
     <!-- <script src="https://d3js.org/d3-timer.v1.min.js"></script> -->
-    <script src="js/particles.js"></script>
+    <!-- <script src="js/particles.js"></script> -->
     <script src="js/easymljs.js"></script>
     <script src="js/kmeansd3.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/life_game.js"></script>
 
 </body>
 
