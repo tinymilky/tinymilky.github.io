@@ -7,6 +7,11 @@
 /* ==== Google font ==== */
 @import url(https://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600,400italic,700);
 
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body {
     width: 100%;

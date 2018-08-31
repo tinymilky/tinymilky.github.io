@@ -16,13 +16,9 @@ var lifeGame = function() {
   ctx.fillStyle = "rgba(172,31,45,0.85)";
 
   wh_ratio = canvas.width / canvas.height;
-
   n_height = 64;
   n_width = parseInt(n_height * wh_ratio);
-
   n_pixel = parseInt(canvas.height / n_height);
-
-  console.log(n_height, n_width, n_pixel);
 
   init();
 
