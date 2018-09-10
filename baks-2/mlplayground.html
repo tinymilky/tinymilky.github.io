@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hang Zhang, Ph.D. student at Cornell">
+  <meta name="author" content="Hang Zhang">
+  <meta property="og:description" content="Hang Zhang, Ph.D. student at Cornell">
+  <link rel="shortcut icon" href="./img/cornell.png">
+  <title>Hang Zhang</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+  <link href="color/default.css" rel="stylesheet">
+  <link href="css/kmeans.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load"></div>
+  </div>
+
+  <!-- Section: intro -->
+  <section id="intro" class="intro">
+    <canvas id="life_game" width="1000" height="1000" style="position:absolute;left:0;top:0;overflow: hidden"></canvas>
+    <div id="title_wrapper">
+      <h1 id="site_title" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_title" class="skrollable skrollable-between" style="opacity: 1; top: 53.3333px;">
+            <a style="color:rgb(172,31,45)">Hang</a> Zhang
+        </h1>
+
+      <h2 id="site_slogan" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_slogan" class="skrollable skrollable-between" style="opacity: 1; top: 63.3333px;">
+        Ph.D. Student of ECE at <a style="color:rgb(172,31,45)">Cornell</a>
+        </h2>
+    </div>
+  </section>
+  <!-- /Section: intro -->
+
+  <!-- Navigation -->
+  <div id="navigation">
+    <nav class="navbar navbar-custom" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <i class="fa fa-bars"></i>
+                            </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="#about">About</a></li>
+                <li class="active"><a href="#dragging-cnn">Dragging CNN</a></li>
+                <li class="active"><a href="#k-means">K-Means</a></li>
+                <li class="active"><a href="#convolution">Convolution</a></li>
+                <li class="active"><a href="#flappybird">DRL Flappy Bird</a></li>
+                <li class="active"><a href="#stickchart">Bitcoin Stick Chart</a></li>
+                <li class="active"><a href="#piechart">Bitcoin Pie Chart</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section id="about" class="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h2>Machien Learning Playground</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <img src="img/img1.jpg" class="img-responsive img-rounded" alt="" /> -->
+            <img src="materials/all.gif" class="img-responsive img-rounded" alt="" />
+            <p>Six different applications</p>
+          </div>
+          <div class="col-md-6">
+            Developed by Ph.D. student <b><a href="./index.html">Hang Zhang</a> from</b> <br>
+            <a href="https://www.ece.cornell.edu/">Department of Electrical &amp; Computer Engineering (ECE)</a><br>
+            <a href="https://www.cornell.edu/">Cornell University</a> <br> Membership: ACM, IEEE, AAAI, CCF member
+            <br />
+            <br />
+            <br />
+            <button type="button" class="btn btn-secondary"><a href="http://www.ece.cornell.edu/"><img src="img/ece2.png" class="img-responsive img-rounded" alt="" /></a></button>
+            <br />
+            <br />
+            <br />
+            <p><b>Email:</b> hz459[at]cornell.edu / hzhang[at]cse.cuhk.edu.hk <br />
+              <b>Office:</b> Rm 208, Philips Hall, Ithaca</p>
+            <br />
+            <i>P.S., Here are just gif demos for these application. If you are interested to experience more, please drop me an email.</i>
+
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="dragging-cnn" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Build Your Own Convolution Neural Network by Simply Dragging the Components</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/cnn.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="k-means" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>K-means Algorithm Visualization</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/k-means.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flappybird" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Deep Reinforcement Learning based Flappy Bird Game</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/flappybird.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="convolution" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Real-time Convolution Visualization</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/conv.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stickchart" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Real-time Volume Visualization Accross Multiple Bitcoin Exchanges</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/stickchart.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="piechart" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Real-time Volume Visualization Accross Multiple Trading Pairs</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 image-center">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <img src="materials/piechart.gif" class="img-responsive img-rounded" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <a href="http://www.ece.cornell.edu/"><img src="img/ece.png" class="img-responsive img-rounded" alt="" /></a>
+        </div>
+        <div class="col-md-12 col-lg-12">
+          <p>&copy; <a style="color:red">Miruku</a> H. Zhang</p>
+          <div class="credits">
+            All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="js/custom.js"></script>
+  <script src="js/easymljs.js"></script>
+  <script src="js/kmeansd3.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/life_game.js"></script>
+  <script src="js/filter.js"></script>
+
+</body>
+
+</html>

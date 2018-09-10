@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hang Zhang, Ph.D. student at Cornell">
+    <meta name="author" content="Hang Zhang">
+    <meta property="og:description" content="Hang Zhang, Ph.D. student at Cornell">
+    <link rel="shortcut icon" href="./img/cornell.png">
+    <title>Hang Zhang</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+    <link href="css/kmeans.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="load"></div>
+    </div>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
+        <canvas id="life_game" width="1000" height="1000" style="position:absolute;left:0;top:0;overflow: hidden"></canvas>
+        <div id="title_wrapper">
+            <h1 id="site_title" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_title" class="skrollable skrollable-between" style="opacity: 1; top: 53.3333px;">
+                <a style="color:rgb(172,31,45)">Hang</a> Zhang
+            </h1>
+
+            <h2 id="site_slogan" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_slogan" class="skrollable skrollable-between" style="opacity: 1; top: 63.3333px;">
+                Ph.D. Student of ECE at <a style="color:rgb(172,31,45)">Cornell</a>
+            </h2>
+        </div>
+    </section>
+    <!-- /Section: intro -->
+
+    <!-- Navigation -->
+    <div id="navigation">
+        <nav class="navbar navbar-custom" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#intro">Home</a></li>
+                                <li class="active"><a href="#about">About</a></li>
+                                <li class="active"><a href="#updates">Updates</a></li>
+                                <li class="active"><a href="#publications">Publications</a></li>
+                                <li class="active"><a href="#awards">Awards</a></li>
+                                <li class="active"><a href="#services">services</a></li>
+                                <li class="active"><a href="./mlplayground.html" style="color:rgb(172,31,45)"> Machine Learning Playground</a></li>
+                                <!-- <li class="active"><a href="./gallery.html">Milky Gallery</a></li> -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- /Navigation -->
+
+    <!-- Section: about -->
+    <section id="about" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>Hang Zhang 张航</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <img src="img/img1.jpg" class="img-responsive img-rounded" alt="" /> -->
+                    <img src="img/img1.jpg" class="img-responsive img-rounded" alt="" />
+                    <p>The shot was taken at Griffith Observatory, LA</p>
+                </div>
+                <div class="col-md-6">
+                    <b>Ph.D. student</b> <br>
+                    <a href="https://www.ece.cornell.edu/">Department of Electrical &amp; Computer Engineering (ECE)</a><br>
+                    <a href="https://www.cornell.edu/">Cornell University</a> <br> Membership: ACM, IEEE, AAAI, CCF member
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-secondary"><a href="http://www.ece.cornell.edu/"><img src="img/ece2.png" class="img-responsive img-rounded" alt="" /></a></button>
+                    <br />
+                    <br />
+                    <p><b>Email:</b> hz459[at]cornell.edu / hzhang[at]cse.cuhk.edu.hk <br />
+                        <b>Office:</b> Rm 208, Philips Hall, Ithaca</p>
+                    <br />
+                    <i>"If not now, <b>when</b> ? If not you, <b>who</b>?"</i>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-1 col-xs-4">
+                    <a href="http://cornellbigred.com/" title="Cornell Big Red"><img src="img/bigred.png" class="img-responsive img-rounded" alt="" /></a>
+                </div>
+                <div class="col-sm-1 col-xs-4">
+                    <a href="https://www.cornell.edu/" title="Cornell University"><img src="img/cornell.png" class="img-responsive img-rounded" alt="" /></a>
+                </div>
+                <div class="col-sm-1 col-xs-4">
+                    <a href="http://www.cuhk.edu.hk/" title="The Chinese University of Hong Kong"><img src="img/cuhk.png" class="img-responsive img-rounded" alt="" /></a>
+                </div>
+                <div class="col-sm-1 col-xs-4">
+                    <a href="http://www1.scu.edu.cn/" title="Sichuan University"><img src="img/scu.jpg" class="img-responsive img-rounded" alt="" /></a>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <p><b>Hang Zhang</b> is currently a second year Ph.D. student in Department of Electrical & Computer Engineering at Cornell University. He earned his Master of Philosophy (M.PHIL) degree from <a href="http://www.cse.cuhk.edu.hk/v7/en/index.html">the
+                        Department of Computer Science & Engineering</a>,
+                    <a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>, under the supervision of Prof. <a href="http://www.cse.cuhk.edu.hk/~fyyoung/">Evangeline F. Y. Young</a>. Before that, he received his
+                    B.Eng degree
+                    from <a href="http://www.scu.edu.cn/en/">Sichuan University (SCU)</a> in 2015, where he worked with Prof. <a href="http://www.scu.edu.cn/eie/faculty/webinfo/2010/10/1286178494662243.html">Xiaohai He</a>.</p>
+                <p> His current research investigates algorithms and theories in deep learning, machine learning and their applications in related areas such as robotics, computer vision and data mining . His previous research in the area of
+                    Computer-aided Design
+                    (CAD) and Electronic Design Automation (EDA) has been recognized with a <b>Best Paper Award</b> (<a href="https://www.ece.cornell.edu/ece/news/index.cfm?news_id=96566&news_back=category%3D62992">News</a>) from the 26th IEEE
+                    International Symposium
+                    on Field-Programmable Custom Computing Machines (FCCM'2018), and a <b>Best Paper Award</b> (<a href="http://www.cse.cuhk.edu.hk/en/achievement/professor-and-research-staff/111-mr-zhang-hang-mr-zhu-fengyuan-mr-li-haocheng-prof-young-fung-yu-and-prof-yu-bei-received-the-best-paper-award-at-acm-international-symposium-on-physical-design-ispd-2017">News</a>)
+                    from the ACM International Symposium on Physical Design 2017 (ISPD'2017).
+                </p>
+                <p> Besides the above research, he is also interested in various areas of data visualization and human-computer interaction for applications like interactive machine learning education or financial data service. More details could be
+                    approached via
+                    <a href="./mlplayground.html">machine learning playground</a>.
+                </p>
+                <!-- <p>
+                    <b><font style="color:rgb(172,31,45)"> Attention please!</font></b> <br> Wanna get credit for your study while doing cutting-edge research at Cornell? Hit me with your CV/Resume, I have research candies on deep learning, autonomous driving and robotics.
+                    MS/UG students from Cornell are welcome for Fall 2018, and please note that quota for this summer is full filled. <br>
+                    <b>
+                        <button type="button" class="btn btn-danger btn-xs">
+                            <a class="conf" target="_blank" color="white" href="./projects.html">
+                                <font color="white">Summer Projects Page</font>
+                            </a>
+                        </button>
+                    </b>
+                </p> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12 image-center card">
+                    <div class="card-body">
+                        <a href="./mlplayground.html"><img src="materials/all-2.gif" class="img-responsive img-rounded img-center" height="85%" width="85%" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Section: about -->
+
+
+
+    <section id="updates" class="home-section text-center bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="section-heading">
+                        <h2>Recent Updates</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+                <ul class="event-list">
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">AUG</span>
+                            <span class="month">2018</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">Our <b><a href="http://bigredlidar.github.io" style="color:rgb(172,31,45)">BigRedLidar</a></b> dataset regarding point cloud segmentation will be released soon via our <a href="http://bigredlidar.github.io">website</a></h2>
+                        </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">May</span>
+                            <span class="month">2018</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">Our paper <i>Fast and Accurate Estimation of Quality of Results in High-Level Synthesis with Machine Learnin</i> has won <b>Best Paper Award</b> at <a href="http://fccm.org/2018/">FCCM2018</a>
+                                (News link: <a href="https://www.ece.cornell.edu/ece/news/index.cfm?news_id=96566&news_back=category%3D62992">News</a>)</h2>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <time datetime="2014-07-20 0000">
+                        <span class="month">&nbsp</span>
+                        <span class="month">Mar</span>
+                        <span class="month">2018</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">One paper is accepted to <a href="http://fccm.org/2018/" >The 26th IEEE International Symposium on Field-Programmable Custom Computing Machines.</a></h2>
+                        </div>
+                    </li> -->
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">Aug</span>
+                            <span class="month">2017</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">I have successfully passed my oral defense for my M.Phil study at CUHK.</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">Jun</span>
+                            <span class="month">2017</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">I will come to E Tiger Capital Management LLC as a research assistant to work on deep learning for applications in finance, especially deep portfolios.</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">Apr</span>
+                            <span class="month">2017</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">I will come to <a href="https://www.cornell.edu/">Cornell University</a> for my Ph.D. study this fall.</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <time datetime="2014-07-20 0000">
+                            <!-- <span class="day">16</span> -->
+                            <span class="month">&nbsp</span>
+                            <span class="month">Mar</span>
+                            <span class="month">2017</span>
+                        </time>
+                        <div class="info" style="text-align: left">
+                            <h2 class="title">Our paper <i>Bilinear Lithography Hotspot Detection</i> has won <b>Best Paper Award</b> at <a href="http://www.ispd.cc/">ACM International Symposium on Physical Design 2017</a> (News link:
+                                <a href="http://www.cse.cuhk.edu.hk/en/achievement/professor-and-research-staff/111-mr-zhang-hang-mr-zhu-fengyuan-mr-li-haocheng-prof-young-fung-yu-and-prof-yu-bei-received-the-best-paper-award-at-acm-international-symposium-on-physical-design-ispd-2017">
+                                    CUHK research excellence
+                                </a>)</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section: separator -->
+    <section id="separator" class="home-section parallax text-center" data-stellar-background-ratio="0.5">
+    </section>
+    <!-- /Section: separator -->
+
+
+    <section id="publications" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>Publications</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3>2019</h3>
+        </div>
+        <div class="container">
+            <div style="text-align: left; margin-top:10px" class="col-md-12">
+                <ul>
+                    <li>
+                        A Fast Machine Learning-based Mask Printability Predictor for OPC Acceleration, <br /> Bentian Jiang <b>Hang Zhang</b>, Jinglei Yang and Evangeline F.Y. Young <br />
+                        <i>IEEE/ACM Asian and South Pacic Design Automation Conference (<b>ASPDAC</b>)</i>, 2019. (<b>Accepted</b>) <br />
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h3>2018</h3>
+        </div>
+        <div class="container">
+            <div style="text-align: left; margin-top:10px" class="col-md-12">
+                <ul>
+                    <li>
+                        <a href="http://www.csl.cornell.edu/~zhiruz/pdfs/hls-qor-fccm2018.pdf">Fast and Accurate Estimation of Quality of Results in High-Level Synthesis with Machine Learning</a>, <br /> Steve Dai, Yuan Zhou, <b>Hang Zhang</b>,
+                        Ecenur Ustun, Evangeline
+                        Young and Zhiru Zhang, <br />
+                        <i>IEEE International Symposium on Field-Programmable Custom Computing Machines (<b>FCCM</b>)</i>, 2018. (<b>
+                            <font style="color:rgb(172,31,45)">Best Paper Award</font>
+                        </b>) <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://www.csl.cornell.edu/~zhiruz/pdfs/hls-qor-fccm2018.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="https://www.ece.cornell.edu/ece/news/index.cfm?news_id=96566&news_back=category%3D62992">
+                                <font color="white">News</font>
+                            </a></button>
+                        <p></p>
+                    </li>
+                    <li>
+                        <a href="http://ieeexplore.ieee.org/document/8286966/">A New Regularized Matrix Discriminant Analysis (R-MDA) Enabled Human-Centered EEG Monitoring Systems</a>, <br /> Jie Su, Linbo Qing, Xiaohai He,
+                        <b>Hang Zhang</b>, Jing Zhou, and Yonghong Peng, <br />
+                        <i>IEEE Access Journal</i>, 2018. <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button>
+                            <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h3>2017</h3>
+        </div>
+        <div class="container">
+            <div style="text-align: left; margin-top:10px" class="col-md-12">
+                <ul>
+                    <li>
+                        Extreme Bilinear Learning Machine for Lithography Hotspot Detection, <br />
+                        <b>Hang Zhang</b>, Fengyuan Zhu, Bentian Jiang, Haocheng Li, Evangeline F.Y. Young, and Bei Yu, <br />
+                        <i>ACM Transactions on Design Automation of Electronic Systems (<b>TODAES</b>)</i>, 2017. (Submitted) <br />
+                        <!-- <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href=""><font color="white">PDF</font></a></button> -->
+                        <!-- <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href=""><font color="white">slides</font></a></button> -->
+                        <!-- <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                    <li>
+                        <a href="https://dl.acm.org/citation.cfm?doid=3061639.3062285">Minimizing Thermal Gradient and Pumping Power in 3D IC Liquid Cooling Network Design</a>, <br /> Gengjie Chen, Jian Kuang, Zhiliang Zeng,
+                        <b>Hang Zhang</b>, Evangeline F.Y. Young, and Bei Yu, <br />
+                        <i>ACM/IEEE Design Automation Conference (<b>DAC</b>)</i>, Austin, TX, June 3–7, 2017. <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/3D_ICE.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/slides/DAC2017_Chen.pdf">
+                                <font color="white">Slides</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                    <li>
+                        <a href="http://dl.acm.org/citation.cfm?id=3036673">Bilinear Lithography Hotspot Detection</a>, <br />
+                        <b>Hang Zhang</b>, Fengyuan Zhu, Haocheng Li, Evangeline F. Y. Young, and Bei Yu, <br />
+                        <i>ACM International Symposium on Physical Design (<b>ISPD</b>)</i>, Portland OR, USA, Mar. 19-22, 2017. (<b>
+                            <font style="color:rgb(172,31,45)">Best Paper Award</font>
+                        </b>) <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/BilinearHSD_preprint.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/slides/ISPD2017_Zhang.pdf">
+                                <font color="white">Slides</font>
+                            </a></button>
+                        <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://www.cse.cuhk.edu.hk/en/achievement/professor-and-research-staff/111-mr-zhang-hang-mr-zhu-fengyuan-mr-li-haocheng-prof-young-fung-yu-and-prof-yu-bei-received-the-best-paper-award-at-acm-international-symposium-on-physical-design-ispd-2017">
+                                <font color="white">News</font>
+                            </a></button>
+                        <p></p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h3>2016</h3>
+        </div>
+        <div class="container">
+            <div style="text-align: left; margin-top:10px" class="col-md-12">
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/1611.04686">Robust Matrix Regression</a>, <br />
+                        <b>Hang Zhang</b>, Fengyuan Zhu, and Shixin Li. <br />
+                        <i>Technical report in arXiv</i>, 2016. <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/1611.04686v1.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button>
+                            <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                    <li>
+                        <a href="http://dx.doi.org/10.1109/APCCAS.2016.7804024">VLSI Layout Hotspot Detection Based on Discriminative Feature Extraction</a>, <br />
+                        <b>Hang Zhang</b>, Haoyu Yang, Bei Yu, and Evangeline F. Y. Young, <br />
+                        <i>IEEE Asia Pacific Conference on Circuits and Systems (APCCAS)</i>, Jeju, Korea, Oct. 25-28, 2016. (<b>Invited Paper</b>) <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/APCCAS16_HSD.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/slides/APCCAS2016_Zhang.pdf">
+                                <font color="white">Slides</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                    <li>
+                        <a href="http://dl.acm.org/citation.cfm?id=2967032">Enabling Online Learning in Lithography Hotspot Detection with Information-Theoretic Feature Optimization</a>, <br />
+                        <b>Hang Zhang</b>, Bei Yu, and Evangeline F. Y. Young, <br />
+                        <i>IEEE/ACM International Conference on Computer-Aided Design (<b>ICCAD</b>)</i>, Austin TX, USA, Nov. 7-10, 2016. <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/a47-zhang.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/slides/ICCAD2016_Zhang.pdf">
+                                <font color="white">Slides</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <p></p>
+
+                    </li>
+                    <li>
+                        <a href="http://dl.acm.org/citation.cfm?id=2980084">RippleFPGA: A Routability-Driven Placement for Large-Scale Heterogeneous FPGAs</a>, <br /> Chak-Wa Pui, Gengjie Chen, Wing-Kai Chow, Jian Kuang, Ka-Chun Lam, Peishan Tu, <b>Hang
+                            Zhang</b>,
+                        Evangeline F.Y. Young, and Bei Yu, <br />
+                        <i>IEEE/ACM International Conference on Computer-Aided Design (<b>ICCAD</b>)</i>, Austin TX, USA, Nov. 7-10, 2016. (<b>Invited Paper</b>) <br />
+                        <button type="button" class="btn btn-primary btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/a67-pui.pdf">
+                                <font color="white">PDF</font>
+                            </a></button>
+                        <button type="button" class="btn btn-success btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/slides/DAC2017_Chen.pdf">
+                                <font color="white">Slides</font>
+                            </a></button>
+                        <!-- <button type="button" class="btn btn-danger btn-xs"><a class="conf" target="_blank" color="white" href="http://appsrv.cse.cuhk.edu.hk/~hzhang/papers/08286966.pdf"><font color="white">PDF</font></a></button> -->
+                        <!-- <p></p> -->
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>Selected Honors & Awards</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div style="text-align: left" class="col-md-12">
+                <li>
+                    HP Fellowship, 2018.
+                </li>
+                <li>
+                    <b>Best Paper Award</b> at <a href="http://fccm.org/2018/">FCCM' 2018</a>.
+                </li>
+                <li>
+                    Cornell Graduate School Fellowship at Cornell University, 2017-2018.
+                </li>
+                <li>
+                    <b>Best Paper Award</b> at <a href="http://www.ispd.cc/">ISPD' 2017</a>.
+                </li>
+                <li>
+                    Second Place Award in CAD contest at <a href="http://www.ispd.cc/contests/16/ispd2016_contest.html">ISPD</a>, held by Xilinx, 2016.
+                </li>
+                <li>
+                    The Championship Award of CAD Contest at <a href="http://cad-contest.el.cycu.edu.tw/CAD-contest-at-ICCAD2015/">ICCAD</a>, held by Stanford &amp; IBM, 2015.
+                </li>
+                <li>
+                    Full Postgraduate Studentship at The Chinese University of Hong Kong, 2015-2017.
+                </li>
+                <li>
+                    Excellent Bachelor Thesis Award at Sichuan University (<b>Top 1%</b>), 2015.
+                </li>
+                <li>
+                    Talents Project in <a href="http://jwc.scu.edu.cn/wyz/">Wu Yuzhang Honors College</a> at Sichuan University (<b>
+                        <font style="color:rgb(172,31,45)"> Top 0.1%</font>
+                    </b>), 2013-2015.
+                </li>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="services" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>Professional Services</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div style="text-align: left" class="col-md-12">
+                <li>
+                    <span class="label label-info">Judge~~~</span> Poster judge for Mengs of Electrical & Computer Engineering at Cornell University, 2017-2018 Spring.
+                </li>
+                <li>
+                    <span class="label label-success">Teaching</span> ENGG2440A: Discrete Mathematics for Engineers, Instructor: <a href="http://www.cse.cuhk.edu.hk/~andrejb/">Bogdanov Andrej</a>, 2015-2016 fall.
+                </li>
+                <li>
+                    <span class="label label-primary">Reviewer</span> IEEE Transactions On Computer-Aided Design (TCAD).
+                </li>
+                <li>
+                    <span class="label label-primary">Reviewer</span> Journal of Micro/Nanolithography, MEMS, and MOEMS (JM3).
+                </li>
+                <li>
+                    <span class="label label-primary">Reviewer</span> IEEE/ACM Design Automation Conference (DAC).
+                </li>
+                <li>
+                    <span class="label label-primary">Reviewer</span> IEEE/ACM Asia and South Pacific Design Automation Conference (ASPDAC).
+                </li>
+                <li>
+                    <span class="label label-primary">Reviewer</span> Great Lakes Symposium on VLSI (GLSVLSI).
+                </li>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section id="playground" class="home-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Machine Learning Playground</h2> Interactive Machine Learning Platform (<a href="">More games</a>)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <button type="button" class="btn btn-secondary" onclick="startKmeans()">Play K-means Game</button>
+      <br/>
+      <div class="row col-lg-offset-2">
+        <div class="col-lg-3">
+          # of Clusters:
+          <input class="inputParam" type="text" maxlength="20" id="k_input" value="10"/>
+        </div>
+        <div class="col-lg-3">
+          # of Samples:
+          <input class="inputParam" type="text" maxlength="20" id="n_input" value="1000"/>
+        </div>
+        <div class="col-lg-3">
+          # of Iterations:
+          <input class="inputParam" type="text" maxlength="20" id="i_input" value="10"/>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div id="kmeans" class="kmeans-chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+    <!-- <section id="miscellanies" class="home-section text-center bg-gray">
+
+    </section> -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <a href="http://www.ece.cornell.edu/"><img src="img/ece.png" class="img-responsive img-rounded" alt="" /></a>
+                </div>
+                <div class="col-md-12 col-lg-12">
+                    <p>&copy; <a style="color:red">Miruku</a> H. Zhang</p>
+                    <div class="credits">
+                        All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+        <xsl:output method="text" />
+        <xsl:template match="/Footer">
+            <![CDATA[
+<!-- Start of StatCounter Code for Microsoft Office Live -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=11149150;
+var sc_invisible=0;
+var sc_security="59193237";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+//]]>
+            </script>
+            <noscript>
+                <div class="statcounter"><a title="hit counter" href="http://statcounter.com/free-hit-counter/" class="statcounter"><img class="statcounter" src="//c.statcounter.com/11149150/0/59193237/0/" alt="hit counter" /></a></div>
+            </noscript>
+            <!-- End of StatCounter Code for Microsoft Office Live -->
+        </xsl:template>
+    </xsl:stylesheet>
+
+    <!-- Default Statcounter code for Personal Homepage https://tinymilky.github.io/
+-->
+    <script type="text/javascript">
+        var sc_project = 11814271;
+        var sc_invisible = 1;
+        var sc_security = "a2ff47d2";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics Made Easy -
+StatCounter" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11814271/0/a2ff47d2/1/" alt="Web
+Analytics Made Easy - StatCounter"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <!-- <script src="https://d3js.org/d3-timer.v1.min.js"></script> -->
+    <!-- <script src="js/particles.js"></script> -->
+    <script src="js/easymljs.js"></script>
+    <script src="js/kmeansd3.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/life_game.js"></script>
+
+</body>
+
+</html>
