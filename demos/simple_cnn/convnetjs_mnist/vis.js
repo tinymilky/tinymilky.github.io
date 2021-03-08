@@ -41,7 +41,7 @@ var cnnvis = (function(exports) {
                     datasets: [
                         {
                             data: [],
-                            label: "平均损失值",
+                            label: "Avg. Loss",
                             borderColor: "#c45850",
                             fill: false
                         }
@@ -50,7 +50,7 @@ var cnnvis = (function(exports) {
                 options: {
                     title: {
                         display: true,
-                        text: "卷积神经网络损失函数曲线图"
+                        text: "Loss Curve of the CNN Model"
                     },
                     responsive: true
                 }

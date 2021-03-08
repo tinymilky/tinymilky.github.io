@@ -223,56 +223,56 @@ var visualize_activations = function(net, elt) {
         if (L.layer_type === "softmax" || L.layer_type === "fc") scale = 10; // for softmax
         draw_activations(activations_div, L.out_act, scale);
 
-        // // visualize data gradients
-        // if (L.layer_type !== "softmax") {
-        //     var grad_div = document.createElement("div");
-        //     grad_div.appendChild(
-        //         document.createTextNode("Activation Gradients:")
-        //     );
-        //     grad_div.appendChild(document.createElement("br"));
-        //     grad_div.className = "layer_grad";
-        //     var scale = 2;
-        //     if (L.layer_type === "softmax" || L.layer_type === "fc") scale = 10; // for softmax
-        //     draw_activations(grad_div, L.out_act, scale, true);
-        //     activations_div.appendChild(grad_div);
-        // }
-        //
-        // // visualize filters if they are of reasonable size
-        // if (L.layer_type === "conv") {
-        //     var filters_div = document.createElement("div");
-        //     if (L.filters[0].sx > 2) {
-        //         // actual weights
-        //         //filters_div.appendChild(document.createTextNode('B-template values:'));
-        //         for (var j = 0; j < L.filters.length; j++) {
-        //             //display kernel values
-        //             A = L.filters[j];
-        //             for (var d = 0; d < A.depth; d++) {
-        //                 //filters_div.appendChild(document.createElement('br'));
-        //                 //filters_div.appendChild(document.createTextNode('('));
-        //                 for (var x = 0; x < A.sx; x++) {
-        //                     for (var y = 0; y < A.sy; y++) {
-        //                         //filters_div.appendChild(document.createTextNode(Math.round(A.get(x,y,d) * 100) / 100 ));
-        //                         //filters_div.appendChild(document.createTextNode(' '));
-        //                     }
-        //                 }
-        //                 //filters_div.appendChild(document.createTextNode(')'));
-        //             }
-        //             //draw_activations(filters_div, L.filters[j], 2);
-        //         }
-        //         // gradients
-        //         //filters_div.appendChild(document.createElement('br'));
-        //         //filters_div.appendChild(document.createTextNode('Weight Gradients:'));
-        //         //filters_div.appendChild(document.createElement('br'));
-        //         for (var j = 0; j < L.filters.length; j++) {
-        //             //filters_div.appendChild(document.createTextNode('('));
-        //             ////draw_activations(filters_div, L.filters[j], 2, true);
-        //             //filters_div.appendChild(document.createTextNode(')'));
-        //         }
-        //     } else {
-        //         //filters_div.appendChild(document.createTextNode('Weights hidden, too small'));
-        //     }
-        //     activations_div.appendChild(filters_div);
-        // }
+        // visualize data gradients
+        if (L.layer_type !== "softmax") {
+            var grad_div = document.createElement("div");
+            grad_div.appendChild(
+                document.createTextNode("Activation Gradients:")
+            );
+            grad_div.appendChild(document.createElement("br"));
+            grad_div.className = "layer_grad";
+            var scale = 2;
+            if (L.layer_type === "softmax" || L.layer_type === "fc") scale = 10; // for softmax
+            draw_activations(grad_div, L.out_act, scale, true);
+            activations_div.appendChild(grad_div);
+        }
+        
+        // visualize filters if they are of reasonable size
+        if (L.layer_type === "conv") {
+            var filters_div = document.createElement("div");
+            if (L.filters[0].sx > 2) {
+                // actual weights
+                //filters_div.appendChild(document.createTextNode('B-template values:'));
+                for (var j = 0; j < L.filters.length; j++) {
+                    //display kernel values
+                    A = L.filters[j];
+                    for (var d = 0; d < A.depth; d++) {
+                        //filters_div.appendChild(document.createElement('br'));
+                        //filters_div.appendChild(document.createTextNode('('));
+                        for (var x = 0; x < A.sx; x++) {
+                            for (var y = 0; y < A.sy; y++) {
+                                //filters_div.appendChild(document.createTextNode(Math.round(A.get(x,y,d) * 100) / 100 ));
+                                //filters_div.appendChild(document.createTextNode(' '));
+                            }
+                        }
+                        //filters_div.appendChild(document.createTextNode(')'));
+                    }
+                    //draw_activations(filters_div, L.filters[j], 2);
+                }
+                // gradients
+                //filters_div.appendChild(document.createElement('br'));
+                //filters_div.appendChild(document.createTextNode('Weight Gradients:'));
+                //filters_div.appendChild(document.createElement('br'));
+                for (var j = 0; j < L.filters.length; j++) {
+                    //filters_div.appendChild(document.createTextNode('('));
+                    ////draw_activations(filters_div, L.filters[j], 2, true);
+                    //filters_div.appendChild(document.createTextNode(')'));
+                }
+            } else {
+                //filters_div.appendChild(document.createTextNode('Weights hidden, too small'));
+            }
+            activations_div.appendChild(filters_div);
+        }
         var layer_div = document.createElement("div");
 
         layer_div.appendChild(activations_div);
@@ -286,22 +286,22 @@ var visualize_activations = function(net, elt) {
         var c_layer_type;
         switch (L.layer_type) {
             case "input":
-                c_layer_type = "输入";
+                c_layer_type = "Input";
                 break;
             case "conv":
-                c_layer_type = "卷积核";
+                c_layer_type = "Conv";
                 break;
             case "pool":
-                c_layer_type = "池化";
+                c_layer_type = "Pooling";
                 break;
             case "fc":
-                c_layer_type = "全连接";
+                c_layer_type = "Fully Connected";
                 break;
             case "softmax":
-                c_layer_type = "最后输出结果";
+                c_layer_type = "Output ";
                 break;
             case "Relu":
-                c_layer_type = "线性整流函数";
+                c_layer_type = "Activation";
         }
 
         if((c_layer_type == "卷积核" && L.layer_type != "conv")||(c_layer_type=="全连接")){
