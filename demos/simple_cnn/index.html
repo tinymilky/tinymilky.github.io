@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300" rel="stylesheet">
+    <title>AI EDU</title>
+    <style type="text/css" media="screen">
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" href="css/slidePane.css">
+    <link rel="stylesheet" href="css/tutorial.css">
+    <link rel="stylesheet" href="css/result.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="js/slidePane.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="convnetjs_mnist/jquery-1.8.3.min.js"></script>
+    <script src="convnetjs_mnist/vis.js"></script>
+    <script src="convnetjs_mnist/util.js"></script>
+    <script src="convnetjs_mnist/convnet.js"></script>
+    <script src="convnetjs_mnist/mnist/mnist_labels.js"></script>
+    <script src="convnetjs_mnist/cnn.js"></script>
+    <!-- <link rel="stylesheet" href="convnetjs_mnist/cnn.css"> -->
+
+<style>
+.probsdiv canvas {
+  float: left;
+}
+.probsdiv {
+  height: 60px;
+  width: 180px;
+  display: inline-block;
+  font-size: 12px;
+  box-shadow: 0px 0px 2px 2px #EEE;
+  margin: 5px;
+  padding: 5px;
+  color: black;
+}
+.pp {
+  margin: 1px;
+  padding: 1px;
+}
+</style>
+
+</head>
+
+<body>
+    <div id="topNavBar">
+        <div id="logoDiv">
+            <img src="./image/logo.png" alt="logo" height="40" width="130" style="margin-left:30px;padding-top:4px;" />
+        </div>
+        <div id="titleDiv">
+            <p class="title" style="padding-top:3px;"><font style="color:rgba(255,255,255,0.9);" size="5">MNIST Digit Recognition</font></p>
+        </div>
+        <div id="sideDiv">
+            <img src="image/user.png" class="righticon" alt="cloud" height="30" width="30" style=" right: 20px; top : 10px" />
+            <img src="image/cloud.png" class="righticon" alt="cloud" height="30" width="30" style=" right: 60px; top : 10px" />
+        </div>
+    </div>
+
+    <div id="teachingArea">
+        <div id="tutorial">
+
+            <div class="tutorialTitle">
+                <p class="tutorialFontTitle">Introduction</p>
+            </div>
+            <div class="tutorialDiv">
+
+                <p class="tutorialFontContext">
+                    The tool shows how a simple deep convolutional neural network works.
+                    Basically, we have two convolutional layers with a rectified unit as the activation function.
+                    A pooling layer is cascaded after each convolutional layer. 
+                </p>
+
+            </div>
+            <div class="tutorialTitle">
+                <p class="tutorialFontTitle">Training Statistics</p>
+            </div>
+            <div class="tutorialDivBegin">
+                <div class="tutorialStatusPane">
+                    <div class="statusName">
+                        Average Time Cost for Single Sample Forward：
+                    </div>
+                    <div class="statsValue" id='fwd_time'>
+                        3ms
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="statusName">
+                        Average Time for Single Sample Backward：
+                    </div>
+                    <div class="statsValue" id='bwd_time'>
+                        2ms
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="statusName">
+                        Number of Samples Trained So Far:
+                    </div>
+                    <div class="statsValue" id='step_num'>
+                        2ms
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="statusName">
+                        Training Set Accuracy
+                    </div>
+                    <div class="statsValue" id='trainAccWindow'>
+                        2ms
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorialDivEnd">
+                <div class="tutorialStatusPane">
+                    <div class="statusName">
+                        Validation Set Accuracy：
+                    </div>
+                    <div class="statsValue" id='valAccWindow'>
+                        2.10316
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="tutorialTitle">
+                <p class="tutorialFontTitle">2. Training Stats</p>
+            </div>
+            <div class="tutorialTextDiv">
+                <div class="divsec" >
+                    <div class="secpart">
+                        <div id="trainstats"></div>
+
+                    </div>
+
+                </div>
+            </div> -->
+
+            <div class="tutorialTitle">
+                <p class="tutorialFontTitle">Simple Code</p>
+            </div>
+            <div class="tutorialDiv">
+
+                <p class="tutorialFontContext">
+
+                    'layer_defs.push()': is used to add a convolutional layer. <br>
+                    type: 'input', 'conv', 'pool', ‘fc’, ‘softmax’. <br>
+                    sx:, kernel size, sx = 3 means a 3 x 3 kernel. <br>
+                    filters:, number of kernerls. <br>
+                    stride:, an integer number. <br>
+                    activation:, 'sigmoid', 'tanh', and ‘relu’. <br>
+                    pad:, an integer number.
+                </p>
+
+            </div>
+
+            <div class="tutorialTitle">
+                <p class="tutorialFontTitle">Hyper Parameters</p>
+            </div>
+
+            <div class="tutorialDivBegin">
+                <div class="tutorialStatusPane">
+                    <div class="paramName">
+                        Learning Rate：
+                    </div>
+                    <input name="lri" class="inputParam" type="text" maxlength="10" id="lr_input" />
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="paramName">
+                        Momentum：
+                    </div>
+                    <input name="momi" class="inputParam" type="text" maxlength="20" id="momentum_input" />
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="paramName">
+                        Batch Size：
+                    </div>
+                    <input name="bsi" class="inputParam" type="text" maxlength="20" id="batch_size_input" />
+                </div>
+            </div>
+
+            <div class="tutorialDivMid">
+                <div class="tutorialStatusPane">
+                    <div class="paramName">
+                        L2 Normalization：
+                    </div>
+                    <input name="wdi" class="inputParam" type="text" maxlength="20" id="decay_input" />
+                </div>
+            </div>
+
+            <div class="tutorialDivEnd">
+                <button class="sendButton" id="sendButton2" onclick="change_lr();change_batch_size();change_momentum();change_decay();">Click to Change</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="mainCodingArea">
+
+        <div id="lossGraph">
+            <canvas id="lossgraph" height="50%" width="100%"></canvas>
+        </div>
+
+        <div id="codeEditor">
+            <pre id="editor" style="border-width: 0; ">
+            <!-- layer_defs = [];
+            layer_defs.push({type:'input', out_sx:24, out_sy:24, out_depth:1});
+            layer_defs.push({type:'conv', sx:3, filters:16, stride:1, pad:2, activation:'relu'});
+            layer_defs.push({type:'pool', sx:3, stride:2});
+            layer_defs.push({type:'conv', sx:3, filters:16, stride:1, pad:2, activation:'relu'});
+            layer_defs.push({type:'pool', sx:3, stride:2});
+            layer_defs.push({type:'softmax', num_classes:10});
+            net = new convnetjs.Net(); net.makeLayers(layer_defs);
+            trainer = new convnetjs.SGDTrainer(net, {method:'adadelta', batch_size:20, l2_decay:0.001}); -->
+        </pre>
+
+            <script src="js/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+            <script>
+                var editor = ace.edit("editor");
+                editor.setTheme("ace/theme/twilight");
+                editor.session.setMode("ace/mode/javascript");
+                editor.setShowPrintMargin(false);
+                editor.getSession().setUseWrapMode(true);
+                document.getElementById('editor').style.fontSize = '16px';
+            </script>
+
+        </div>
+
+        <div id="sendCode">
+            <button type="button" class="sendButton" id="sendButton1" onclick="change_net();">Change Network</button>
+
+            <button type="button" class="sendButton" id="sendButton3" onclick="toggle_pause();">Pause Training</button>
+
+            <button type="button" class="sendButton" id="sendButton4" onclick="clear_graph();">Clear Graph</button>
+        </div>
+
+    </div>
+
+    <div id="resultArea">
+        <div id="result">
+
+
+
+            <div class="resultTitle">
+                <p class="resultFontTitle">Testing Samples</p>
+            </div>
+
+            <div class="resultTextDiv">
+                <!-- <div class="divsec"> -->
+                    <div id="testset_acc"></div>
+                <!-- </div> -->
+            </div>
+
+            <div class="resultTitle">
+                <p class="resultFontTitle">Feature Map Visualization</p>
+            </div>
+
+            <div class="resultTextDiv">
+                <div class="divsec">
+                    <div id="visnet"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+        <div id="bottomNavBar">
+            <div id="bottomLeftDiv">
+                <div class="con" style="margin-left:20px; margin-top:10px; float:left;">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+                <p class="subtitle">Hello!</p>
+            </div>
+
+            <div id="bottomMidDiv">
+                <a href="index.html"><button type="button" class="pageButton back"></button></a>
+                <p id="pageNumber">1/1</p>
+                <a href="index.html"><button type="button" class="pageButton next"></button></a>
+            </div>
+            <div id="bottomRightDiv">
+                <a href="../../index.html"><button type="button" class="pageButton hint" style="width:100px; margin-right: 20px;">Homepage</button></a>
+            </div>
+        </div>
+        <div class="nav-pane slide-out">
+            <div class="courseMenu">
+                <p class="menuFont">Menu</p>
+            </div>
+            <div class="courseItem">
+                <a href="../training/index.html"><p class="itemFont">Digit Recognition</p><a>
+            </div>
+        </div>
+
+</body>
+
+</html>

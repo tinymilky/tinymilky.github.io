@@ -1,0 +1,96 @@
+#tutorial{
+  margin-top:15px;
+  margin-left:10px;
+  width:calc(100% - 20px);
+  background-color:#F6F6F6;
+
+}
+.tutorialTitle{
+  width:100%;
+    color:#204056;
+  height:40px;
+   display:flex;
+  justify-content:center;
+  align-items: center;
+  background-color:#D4D5D6;
+
+}
+.tutorialStatusPane
+{
+    border-radius: 10px;
+    padding:10px;
+    background-color:#E5E7E9;
+}
+.tutorialFontTitle{
+font-family: 'Oxygen', sans-serif;
+font-size:18px;
+color:#333F4C;
+margin:0px;
+}
+
+.tutorialFontContext{
+font-family: 'Oxygen', sans-serif;
+font-size:16px;
+color:#3E484D;
+margin:0px;
+
+}
+.tutorialDiv{
+  width:100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.tutorialDivBegin{
+  width:100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:20px;
+  padding-bottom:5px;
+}
+.tutorialDivMid{
+  width:100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.tutorialDivEnd{
+  width:100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:5px;
+  padding-bottom:20px;
+}
+
+
+.codeArea{
+  width:100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:20px;
+  padding-bottom:20px;
+  overflow:auto;
+  z-index:20;
+
+}
+.codeEditor
+{
+   width:100%;
+}
