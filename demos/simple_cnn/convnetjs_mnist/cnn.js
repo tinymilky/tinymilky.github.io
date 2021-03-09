@@ -638,9 +638,9 @@ var toggle_pause = function() {
     paused = !paused;
     var btn = document.getElementById("sendButton3");
     if (paused) {
-        btn.innerHTML = "继续训练";
+        btn.innerHTML = "Pause Training";
     } else {
-        btn.innerHTML = "暂停训练";
+        btn.innerHTML = "Continue Training";
     }
 };
 var dump_json = function() {
