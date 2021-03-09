@@ -669,7 +669,7 @@ var load_from_json = function() {
     reset_all();
 };
 var change_net = function() {
-    // eval($("#editor").html());
+    eval($("#editor").html());
     eval(editor.getValue());
     reset_all();
 };
