@@ -242,34 +242,34 @@ var visualize_activations = function(net, elt) {
             var filters_div = document.createElement("div");
             if (L.filters[0].sx > 2) {
                 // actual weights
-                //filters_div.appendChild(document.createTextNode('B-template values:'));
+                filters_div.appendChild(document.createTextNode('B-template values:'));
                 for (var j = 0; j < L.filters.length; j++) {
                     //display kernel values
                     A = L.filters[j];
                     for (var d = 0; d < A.depth; d++) {
-                        //filters_div.appendChild(document.createElement('br'));
-                        //filters_div.appendChild(document.createTextNode('('));
+                        filters_div.appendChild(document.createElement('br'));
+                        filters_div.appendChild(document.createTextNode('('));
                         for (var x = 0; x < A.sx; x++) {
                             for (var y = 0; y < A.sy; y++) {
-                                //filters_div.appendChild(document.createTextNode(Math.round(A.get(x,y,d) * 100) / 100 ));
-                                //filters_div.appendChild(document.createTextNode(' '));
+                                filters_div.appendChild(document.createTextNode(Math.round(A.get(x,y,d) * 100) / 100 ));
+                                filters_div.appendChild(document.createTextNode(' '));
                             }
                         }
-                        //filters_div.appendChild(document.createTextNode(')'));
+                        filters_div.appendChild(document.createTextNode(')'));
                     }
-                    //draw_activations(filters_div, L.filters[j], 2);
+                    draw_activations(filters_div, L.filters[j], 2);
                 }
                 // gradients
-                //filters_div.appendChild(document.createElement('br'));
-                //filters_div.appendChild(document.createTextNode('Weight Gradients:'));
-                //filters_div.appendChild(document.createElement('br'));
+                filters_div.appendChild(document.createElement('br'));
+                filters_div.appendChild(document.createTextNode('Weight Gradients:'));
+                filters_div.appendChild(document.createElement('br'));
                 for (var j = 0; j < L.filters.length; j++) {
-                    //filters_div.appendChild(document.createTextNode('('));
-                    ////draw_activations(filters_div, L.filters[j], 2, true);
-                    //filters_div.appendChild(document.createTextNode(')'));
+                    filters_div.appendChild(document.createTextNode('('));
+                    //draw_activations(filters_div, L.filters[j], 2, true);
+                    filters_div.appendChild(document.createTextNode(')'));
                 }
             } else {
-                //filters_div.appendChild(document.createTextNode('Weights hidden, too small'));
+                filters_div.appendChild(document.createTextNode('Weights hidden, too small'));
             }
             activations_div.appendChild(filters_div);
         }
@@ -638,9 +638,9 @@ var toggle_pause = function() {
     paused = !paused;
     var btn = document.getElementById("sendButton3");
     if (paused) {
-        btn.innerHTML = "Pause Training";
-    } else {
         btn.innerHTML = "Continue Training";
+    } else {
+        btn.innerHTML = "Pause Training";
     }
 };
 var dump_json = function() {
