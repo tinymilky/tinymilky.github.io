@@ -669,7 +669,24 @@ var load_from_json = function() {
     reset_all();
 };
 var change_net = function() {
-    eval($("#editor").html());
-    eval(editor.getValue());
     reset_all();
+   
+    eval(tf);
+    eval(editor.getValue());
+    eval(te);
+    console.log(tf);
+    console.log(t);
+    console.log(te);
+
+
+    update_net_param_display();
+
+    for (var k = 0; k < loaded.length; k++) {
+        loaded[k] = false;
+    }
+
+    load_data_batch(0); // async load train set batch 0 (6 total train batches)
+    load_data_batch(20); // async load test set (batch 6)
+    start_fun();
+
 };
