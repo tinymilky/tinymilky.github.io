@@ -227,7 +227,6 @@ var visualize_activations = function(net, elt) {
         activations_div.appendChild(
             document.createElement("br")
         );
-
         draw_activations(activations_div, L.out_act, scale);
 
         // visualize data gradients
@@ -299,8 +298,8 @@ var visualize_activations = function(net, elt) {
             case "softmax":
                 c_layer_type = "Output ";
                 break;
-            case "Relu":
-                c_layer_type = "Activation";
+            case "relu":
+                c_layer_type = "ReLU";
         }
 
         if((c_layer_type == "卷积核" && L.layer_type != "conv")||(c_layer_type=="全连接")){
