@@ -221,7 +221,7 @@ var visualize_activations = function(net, elt) {
         activations_div.className = "layer_act";
         var scale = 2;
         if (L.layer_type === "softmax" || L.layer_type === "fc") scale = 10; // for softmax
-        tmp.appendChild(
+        activations_div.appendChild(
             document.createTextNode("Activations:")
         );
         draw_activations(activations_div, L.out_act, scale);
