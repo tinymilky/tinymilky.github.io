@@ -265,7 +265,7 @@ var visualize_activations = function(net, elt) {
                 filters_div.appendChild(document.createElement('br'));
                 for (var j = 0; j < L.filters.length; j++) {
                     filters_div.appendChild(document.createTextNode('('));
-                    //draw_activations(filters_div, L.filters[j], 2, true);
+                    draw_activations(filters_div, L.filters[j], 2, true);
                     filters_div.appendChild(document.createTextNode(')'));
                 }
             } else {
