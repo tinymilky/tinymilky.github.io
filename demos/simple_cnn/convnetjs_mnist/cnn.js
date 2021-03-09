@@ -224,6 +224,10 @@ var visualize_activations = function(net, elt) {
         activations_div.appendChild(
             document.createTextNode("Activations:")
         );
+        activations_div.appendChild(
+            document.createTextNode("br"))
+        );
+
         draw_activations(activations_div, L.out_act, scale);
 
         // visualize data gradients
